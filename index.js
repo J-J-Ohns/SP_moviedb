@@ -12,6 +12,9 @@ app.get('/', (req, res) => {
     res.redirect('/movie');
 });
 
+// Set the view engine to pug
+app.set('view engine', 'pug');
+
 // Middleware & Uses
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: false }));
